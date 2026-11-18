@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bangers", system-ui;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    position: relative;
+    overflow: hidden;
+    background-image: url('./img/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.nome {
+    color: #ff3cac;
+    font-size: 260px;
+    position: absolute;
+    bottom: 500px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.personagem {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 700px;
+    max-width: none;
+    object-fit: contain;
+    object-position: bottom center;
+}
+
+.textos {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 2;
+}
+
+.etiqueta {
+    font-size: 26px;
+    color: #ffd319;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 72px;
+    color: #ffffff;
+}
+
+.texto-apoio {
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.menu {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    z-index: 3;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+}
+
+.voce {
+    background-color: #ffd319;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.status {
+    position: absolute;
+    bottom: 115px;
+    width: 100%;
+    padding: 0 20px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0 2px 4px #000000;
+}
+
+@media (max-width: 900px) {
+    .nome {
+        top: 4%;
+        font-size: clamp(72px, 18vw, 150px);
+    }
+
+    .personagem {
+        bottom: 82px;
+        height: min(620px, 62vh);
+        max-width: 92vw;
+    }
+
+    .textos {
+        bottom: 18px;
+        left: 14px;
+        max-width: 126px;
+        text-align: left;
+    }
+
+    .etiqueta {
+        display: none;
+    }
+
+    h1 {
+        font-size: clamp(26px, 7vw, 42px);
+        line-height: 0.95;
+    }
+
+    .texto-apoio {
+        display: none;
+    }
+
+    .menu {
+        bottom: 18px;
+        left: auto;
+        right: 14px;
+        width: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-position: 58% center;
+    }
+
+    .nome {
+        top: 5%;
+        font-size: clamp(54px, 18vw, 96px);
+    }
+
+    .personagem {
+        bottom: 82px;
+        height: min(520px, 60vh);
+        max-width: 96vw;
+    }
+
+    .textos {
+        left: 14px;
+        bottom: 18px;
+        max-width: 112px;
+    }
+
+    h1 {
+        font-size: clamp(24px, 7vw, 34px);
+    }
+
+    .menu {
+        right: 14px;
+        bottom: 18px;
+        gap: 6px;
+    }
+
+    .avatar {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-height: 700px) {
+    .nome {
+        top: 2%;
+        font-size: clamp(54px, 14vh, 110px);
+    }
+
+    .personagem {
+        height: 56vh;
+        top: 70px;
+    }
+
+    .menu {
+        bottom: 14px;
+    }
+
+    .textos {
+        bottom: 14px;
+    }
+
+    .etiqueta {
+        display: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .textos {
+        max-width: 110px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu {
+        gap: 6px;
+    }
+}
