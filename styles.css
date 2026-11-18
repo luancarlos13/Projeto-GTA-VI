@@ -217,6 +217,10 @@ h1 {
         font-size: 28px;
     }
 
+    .personagem {
+        top: 60px;
+    }
+
     .avatar {
         width: 40px;
         height: 40px;
